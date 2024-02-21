@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock%}
+
+{% block main %}
+
+<div class="profileDetails">
+<img src="{{ url_for('static',filename='myPic.jpg') }}" alt="Image of Akele Benjamin">
+<h1 >Akele Benjamin</h1>
+<p>@abenjamin</p>
+<p>St.Elizabeth, Jamaica</p>
+<p>Joined {{givenDate}}</p>
+</div>
+
+<div class="desc">
+<p>I am currently pursuing a bachelor's degree in Computer Science. I am currently engaging in a few  extracurricular activities such as football and track and field. I hope by the end of my university tenure I will become a well rounded individual in society. I am interested in Web Development because I would like to learn HTmL and be more familiar with GitHub.</p>
+</div>
+
+<div class="socialNums">
+<p id="postCount">1</p>
+<p id="followingCount">100</p>
+<p id="followersCount">1000</p>
+</div>
+<div class="socials">
+<p>Posts</p>
+<p>Following</p>
+<p>Followers</p>
+</div>
+<div class="followBtn">
+<button id="btn">Follow</button>
+</div>
+
+{% endblock %}

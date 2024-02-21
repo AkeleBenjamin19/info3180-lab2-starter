@@ -1,0 +1,58 @@
+img{
+  display: block;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.profileDetails{
+    text-align: center;
+    background-color: darkgreen;
+    color: white;
+}
+.desc{
+    color: grey;
+    text-align: center;
+}
+
+.socialNums{
+    display: flex;
+    justify-content: space-around
+    
+}
+
+.socials{
+    display: flex;
+    justify-content: space-around
+    
+}
+
+#postCount{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#followingCount{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#followersCount{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+.followBtn{
+    text-align: center;
+
+}
+
+button{
+    background-color: lightgreen;
+    padding: 10px 80px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}

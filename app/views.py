@@ -1,6 +1,12 @@
+import datetime
 from app import app
 from flask import render_template, request, redirect, url_for, flash
 
+
+def format_date_joined(givenDate):
+    #dateList=givenDate.split()
+    #return dateList[0],dateList[-1]
+    return givenDate.strftime("%B, %Y") 
 
 ###
 # Routing for your application.
@@ -10,6 +16,14 @@ from flask import render_template, request, redirect, url_for, flash
 def home():
     """Render website's home page."""
     return render_template('home.html')
+
+@app.route('/profile')
+def profile():
+    """Render profile page."""
+    #format_date_joined(datetime.datetime.now())
+    givenDate=format_date_joined(datetime.date(2024, 2, 21))
+    return render_template('profile.html',givenDate=givenDate)
+
 
 
 @app.route('/about/')
@@ -45,3 +59,5 @@ def add_header(response):
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+
